@@ -1,0 +1,20 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: will42-deployment
+  namespace: dev
+spec:
+  # replicas: 3
+  selector:
+    matchLabels:
+      app: will42
+  template:
+    metadata:
+      labels:
+        app: will42
+    spec:
+      containers:
+      - name: will42
+        image: wil42/playground:v1
+        ports:
+        - containerPort: 8080
