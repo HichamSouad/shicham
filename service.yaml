@@ -1,0 +1,13 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: will42-service
+  namespace: dev
+spec:
+  selector:
+    app: will42
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8080
+  type: NodePort
