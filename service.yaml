@@ -8,6 +8,6 @@ spec:
     app: will42
   ports:
     - protocol: TCP
-      port: 88
+      port: 8888
       targetPort: 8888
   type: LoadBalancer
